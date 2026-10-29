@@ -9,9 +9,9 @@ parser=StrOutputParser()
 
 article = """The Mysuru Dasara is a 10-day festival celebrated in Karnataka.
 The Mysuru Palace is lit with nearly 100,000 bulbs, and the Jamboo Savari procession
-on the last day features decorated elephants and the iconic antique gold ambari the elephant carries."""
+on the last day features decorated elephants and  the iconic antique gold ambari the elephant carries."""
 
-summary_chain=PromptTemplate.from_template("Summarize: {text}") | llm |parser
+summary_chain=PromptTemplate.from_template("Summarize: {text}") | llm |parser 
 sentiment_chain=PromptTemplate.from_template("Identify sentiment in: {text}") | llm |parser
 keywords_chain=PromptTemplate.from_template("Identify Keywords in: {text}") | llm |parser
 
